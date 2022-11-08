@@ -17,11 +17,13 @@ const AccordionType = ({ type }) => {
     const menu = useSelector(state => state.menu.menu)
     const [currentlySelected, setCurrentlySelected] = React.useState('')
     const dispatch = useDispatch()
+    // const [isActive, setIsActive] = useState(false);
 
     const handleTypeClick = (type) => {
         if (!menu[type]) {
             setCurrentlySelected(type)
         }
+        // setIsActive(current => !current);
     }
 
     useEffect(() => {
@@ -29,11 +31,11 @@ const AccordionType = ({ type }) => {
     }, [currentlySelected])
 
     return (
-        <AccordionItem key={nanoid()} id={type} onClick={() => handleTypeClick(type)} >
-            <h2>
+        <AccordionItem className='accordion-Item' key={nanoid()} id={type} onClick={() => handleTypeClick(type)} >
+            <h2 className='type-heading'>
                 <Box margin={2}>
                     <AccordionButton>
-                        <Box flex='1' textAlign='left' fontSize={"larger"} fontWeight={"bold"}>
+                        <Box className='type-title' flex='1' textAlign='left' fontSize={"larger"} fontWeight={"bold"}>
                             {type}
                         </Box>
                         <AccordionIcon />

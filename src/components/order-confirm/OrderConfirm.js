@@ -4,7 +4,7 @@ import { CheckCircleIcon, CloseIcon } from '@chakra-ui/icons'
 import { useSelector } from 'react-redux';
 import { Spinner } from '@chakra-ui/react';
 
-export default function OrderConfirm({ name, phone }) {
+export default function OrderConfirm({ table, dinein, name, phone }) {
     const [ordered, setOrdered] = useState(false)
     const [status, setStatus] = useState(0)
 
@@ -20,11 +20,14 @@ export default function OrderConfirm({ name, phone }) {
         else {
             const order =
             {
+                table:table,
+                dinein:dinein,
                 dinerName: name,
                 dinerPhoneNumber: phone,
                 orderedItems,
                 price: price
             }
+            console.log(order)
             const placeOrder = async () => {
                 const res = await fetch('https://smart-restaurant-server.herokuapp.com/diner/place-order', {
                     method: 'POST',

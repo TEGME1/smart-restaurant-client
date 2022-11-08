@@ -4,12 +4,13 @@
     justify-content: space-between;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 .Item-inner {
-    display: grid;
-    /* justify-content: space-between; */
-    grid-template-columns: 40% 33% 33%;
+    /* display: grid; */
+    display: flex;
+    /* grid-template-columns: 40% 33% 33%; */
     width: 100%;
     align-items: center;
 }
@@ -18,7 +19,24 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-left: 1rem;
+    /* margin-left: 0.5rem; */
+    width: 50%;
+    /* min-width: 50%; */
+}
+.Item-middle-outer {
+    /* width: 25%; */
+    justify-content: left;
+    /* margin-right: 5%; */
+    width: 25%;
+    /* min-width: 25%; */
+}
+
+.Item-right-outer {
+    display: flex;
+    justify-content: right;
+    /* margin-right: 0.5rem; */
+    width: 25%;
+    /* min-width: 25%; */
 }
 
 .Item-middle-inner {
@@ -34,7 +52,8 @@
 }
 
 .Item-dish {
-    margin-left: 1rem;
+
+    margin-right: 0rem;
 }
 
 .Item-symbol {
@@ -59,7 +78,7 @@
 }
 
 .Item-dish-name {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
@@ -69,7 +88,7 @@
 }
 
 .Item-dish-price {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     /* margin-right: 0.5rem; */
 }

@@ -13,9 +13,6 @@ import AccordionType from './AccordionType';
 
 export default function AccordionMenu({ types }) {
 
-
-
-
     const accordionMenu =
         <Accordion defaultIndex={[]} allowMultiple>
             {types.map((type) => (

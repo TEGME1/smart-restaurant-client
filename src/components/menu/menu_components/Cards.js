@@ -48,7 +48,10 @@ export default function Card({ type }) {
         typeItems ? typeItems.map(item => (
             <div className='card' key={item._id}>
                 <div className="card-left">
-                    <img className="veg-or-non-veg" />
+                    {/* <img className="veg-or-non-veg" /> */}
+                    <div className={item.veg ? "veg" : "non-veg"}>
+                        <div className={item.veg ? "circle-v" : "circle-nv"}></div>
+                    </div>
                     <div className="food-item-name">
                         {item.name}
                     </div>
@@ -60,7 +63,7 @@ export default function Card({ type }) {
                     </div>
                 </div>
                 <div className="card-right">
-                    <img className='food-item-image' />
+                    <img className='food-item-image' src={item.image}/>
                     <div className="card-add-item">
                         {foodQuantities[item._id] ?
                             <>
@@ -75,7 +78,7 @@ export default function Card({ type }) {
                                 <label><SmallAddIcon h={6} w={6} onClick={() => increment(item._id, item.name, item.price)} /></label>
                             </> :
                             <div onClick={() => increment(item._id, item.name, item.price)} className='add-item-button'>
-                                Αdd Item
+                                Αdd
                             </div>
                         }
 

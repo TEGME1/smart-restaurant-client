@@ -23,7 +23,7 @@ export default function Bill(props) {
                             </div>
 
                             <div className='Bill-totalpay-outer'>
-                                <div className='Bill-totalpay'><label className='Bill-totalpay-content'>Total To Pay :</label></div>
+                                <div className='Bill-totalpay'><label className='Bill-totalpay-content'>Total To Pay : </label></div>
                                 <div className='Bill-totalpay'><label className='Bill-totalpay-price'>{props.total_pay} /-</label></div>
                             </div>
                         </>

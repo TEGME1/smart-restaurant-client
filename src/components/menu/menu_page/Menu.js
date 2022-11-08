@@ -21,7 +21,7 @@ export default function Menu() {
 
     const types = useSelector(typeSelector)
     return (
-        <div className='page-conatainer'>
+        <div className='page-container'>
             <div>
                 <HeaderDiv />
                 {
@@ -30,7 +30,7 @@ export default function Menu() {
                             <>
                                 <AccordionMenu types={types} />
                                 <Link to="/cart">
-                                    <Button flex="1" colorScheme='blue'>View Cart</Button>
+                                    <Button flex="1" colorScheme='blackAlpha'>View Cart</Button>
                                 </Link>
                             </>
                         )

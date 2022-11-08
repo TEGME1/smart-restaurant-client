@@ -45,7 +45,7 @@ export default function Details({ name, phone, setName, setPhone }) {
 
             <div className='Details-input-text-outer'>
               <label className='Details-input-text'>
-                Phone No :
+                Mobile :
               </label>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function Details({ name, phone, setName, setPhone }) {
         </div>
         <div className='Card-items-button'>
           <Button rightIcon={<ArrowForwardIcon />}
-            colorScheme='teal'
+            colorScheme='blackAlpha'
             padding='2%'
             borderRadius='1rem'
             borderTopRightRadius='0'

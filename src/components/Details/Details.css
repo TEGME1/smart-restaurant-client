@@ -1,15 +1,17 @@
 .Details-outer {
     display: flex;
     justify-content: center;
+    padding: 3%;
 }
 
 .Details-inner {
     margin-top: 10rem;
     display: flex;
     flex-direction: column;
-    /* border: 2px solid black; */
-    border-radius: 2rem;
-    padding: 3%;
+    /* border: 2px solid red; */
+    box-shadow: 5px 5px 10px #c0bebe;
+    border-radius: 1rem;
+    /* padding: 3%; */
     width: 55rem;
 }
 
@@ -17,7 +19,7 @@
     padding: 5%;
     display: flex;
     justify-content: space-between;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-bottom: none;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
@@ -30,6 +32,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    /* margin-right: 15px; */
 }
 
 .Details-input-right {
@@ -41,6 +44,7 @@
 .Details-input-text {
     font-size: 1.35rem;
     font-weight: 500;
+    /* padding: 0px 20px; */
 }
 
 .Details-input-text-outer {

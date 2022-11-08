@@ -52,7 +52,7 @@ export default function Cart() {
             {
                 Object.keys(quantity).length === 0 ?
                     <label>Cart empty add items</label> :
-                    <>
+                    <div className='Cart-items-Outer'>
                         <div className='Cart-items-outer1'>
                             <div className='Card-item-inner'>
                                 <div className='Card-items-title'>
@@ -61,14 +61,13 @@ export default function Cart() {
 
                                 <Bill total_price={totalAmt} total_tax={500} total_pay={totalAmt + 500} veg_non={"non"} />
                             </div>
+                            
                         </div>
-
-
 
                         <div className='Card-items-button'>
                             <Link to="/details">
                                 <Button rightIcon={<ArrowForwardIcon />}
-                                    colorScheme='teal'
+                                    colorScheme='blackAlpha'
                                     padding='2%'
                                     borderRadius='1rem'
                                     borderTopRightRadius='0'
@@ -81,7 +80,7 @@ export default function Cart() {
                                 </Button>
                             </Link>
                         </div>
-                    </>
+                    </div>
             }
         </div>
     )
