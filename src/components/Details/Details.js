@@ -13,7 +13,11 @@ import {
   // useDisclosure,
   AlertDialogCloseButton
 } from '@chakra-ui/react';
+// import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import { NavLink as Link } from 'react-router-dom';
+import { useSelector } from 'react-redux'; // Added
+import { Divider } from '@chakra-ui/react'; //Added
+import Dbill from '../Details_bill/Dbill.js';//Added
 
 
 export default function Details({ name, phone, setName, setPhone }) {
@@ -28,11 +32,19 @@ export default function Details({ name, phone, setName, setPhone }) {
   }
   const [isOpen, setopen] = useState(false)
   // console.log({this.state.first})
+  const quantity = useSelector(state => state.quantities)
+  const foodItems = Object.values(quantity)
 
 
   return (
     <div className="Details-outer">
       <div className='Details-inner'>
+        <Link to="/cart">
+          <div className="Details-back-to-cart">
+            <ArrowBackIcon w={10} h={10} />
+            <label className='Cart-back-option-content'>View Cart</label>
+          </div>
+        </Link>
         <div className='Details-input-outer'>
           <div className='Details-input-left'>
             <div className='Details-input-text-outer'>
@@ -97,7 +109,13 @@ export default function Details({ name, phone, setName, setPhone }) {
           <AlertDialogHeader>Confirm Order?</AlertDialogHeader>
           <AlertDialogCloseButton />
           <AlertDialogBody>
-            Are you sure you want to confirm the order
+            <div className='Details-dialog-box'>
+              <label>Are you sure you want to confirm the order</label>
+              <hr className='Details-hr' />
+              <Dbill />
+              <hr className='Details-hr' />
+            </div>
+            {console.log(foodItems[0])}
           </AlertDialogBody>
           <AlertDialogFooter>
             <Button onClick={handleopen}>

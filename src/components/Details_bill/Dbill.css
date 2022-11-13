@@ -1,0 +1,96 @@
+.Dbill-outer {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+
+.Dbill-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Dbill-inner-title-outer {
+    display: flex;
+    width: 4rem;
+    justify-content: space-between;
+    /* text-align: left; */
+}
+
+.Dbill-inner-title {
+    font-weight: 500;
+}
+
+.Dbill-inner1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.Dbill-inner2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.Dbill-inner3-outer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* justify-content: space-between; */
+}
+
+.Dbill-inner3 {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Dbill-inner-item-outer {
+    display: flex;
+    width: 4.5rem;
+    justify-content: space-between;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.Dbill-inner-item-outer1 {
+    display: flex;
+    width: 8rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Dbill-total-outer {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.Dbill-Dbox-outer {
+    display: flex;
+    flex-direction: column;
+}
+
+.Dbill-total-outer {
+    display: flex;
+    justify-content: center;
+}
+
+.Dbill-total-text {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.Dbill-inner-item {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.Dbill-inner-item1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}

@@ -30,7 +30,13 @@ export default function Menu() {
                             <>
                                 <AccordionMenu types={types} />
                                 <Link to="/cart">
-                                    <Button flex="1" colorScheme='blackAlpha'>View Cart</Button>
+                                    <Button flex="1" colorScheme='blackAlpha' width="80%" height="3.5rem">
+                                        <div className='Menu-view-outer'>
+                                            <div className='Menu-view-text-outer'>
+                                                <label className='Menu-view-text'>View Cart</label>
+                                            </div>
+                                        </div>
+                                    </Button>
                                 </Link>
                             </>
                         )

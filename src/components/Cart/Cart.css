@@ -9,6 +9,7 @@
     justify-content: left;
     align-items: center;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .Cart-back-option-content {

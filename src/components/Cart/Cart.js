@@ -21,12 +21,12 @@ export default function Cart() {
     }, [quantity])
     return (
         <div className='Cart-outer'>
-            <div className='Cart-back-option'>
-                <Link to="/menu">
+            <Link to="/menu">
+                <div className='Cart-back-option'>
                     <ArrowBackIcon w={10} h={10} />
-                </Link>
-                <label className='Cart-back-option-content'>My Order</label>
-            </div>
+                    <label className='Cart-back-option-content'>My Order</label>
+                </div>
+            </Link>
 
             <div className='Cart-items-outer'>
                 <div className='Card-item-inner'>
@@ -59,9 +59,9 @@ export default function Cart() {
                                     <label className='Card-items-title-content'>Bill Details</label>
                                 </div>
 
-                                <Bill total_price={totalAmt} total_tax={500} total_pay={totalAmt + 500} veg_non={"non"} />
+                                <Bill total_price={totalAmt} total_tax={totalAmt * 0.18} total_pay={Math.round(totalAmt * 1.18)} veg_non={"non"} />
                             </div>
-                            
+
                         </div>
 
                         <div className='Card-items-button'>
