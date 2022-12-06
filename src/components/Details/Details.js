@@ -16,7 +16,6 @@ import {
 // import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import { NavLink as Link } from 'react-router-dom';
 import { useSelector } from 'react-redux'; // Added
-import { Divider } from '@chakra-ui/react'; //Added
 import Dbill from '../Details_bill/Dbill.js';//Added
 
 
@@ -25,16 +24,13 @@ export default function Details({ name, phone, setName, setPhone }) {
   // const [phone, setPhone] = useState("");
 
   const handleopen = () => {
-    if (isOpen == true)
+    if (isOpen)
       setopen(false);
     else
       setopen(true);
   }
   const [isOpen, setopen] = useState(false)
   // console.log({this.state.first})
-  const quantity = useSelector(state => state.quantities)
-  const foodItems = Object.values(quantity)
-
 
   return (
     <div className="Details-outer">
@@ -115,7 +111,6 @@ export default function Details({ name, phone, setName, setPhone }) {
               <Dbill />
               <hr className='Details-hr' />
             </div>
-            {console.log(foodItems[0])}
           </AlertDialogBody>
           <AlertDialogFooter>
             <Button onClick={handleopen}>

@@ -8,21 +8,21 @@ import "./Landing.css";
 import { useEffect } from 'react';
 
 
-export default function Landing({setTable, setDinein}) {
+export default function Landing({ setTable, setDinein }) {
 
-    const {table} = useParams()
-    useEffect(() =>{
+    const { table } = useParams()
+    useEffect(() => {
         setTable(table)
     }, [])
 
     return (
         <div className='page-conatainer'>
             <div>
-                <Header setDinein={setDinein}/>
-                <Slideshow/>
-                <Body/>
+                <Header setDinein={setDinein} />
+                <Slideshow />
+                <Body />
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

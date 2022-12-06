@@ -5,6 +5,9 @@ import { useSelector } from 'react-redux';
 import { Spinner } from '@chakra-ui/react';
 
 export default function OrderConfirm({ table, dinein, name, phone }) {
+
+    const SERVER_URL = process.env.REACT_APP_SERVER_URL
+
     const [ordered, setOrdered] = useState(false)
     const [status, setStatus] = useState(0)
 
@@ -20,8 +23,8 @@ export default function OrderConfirm({ table, dinein, name, phone }) {
         else {
             const order =
             {
-                table:table,
-                dinein:dinein,
+                table: table,
+                dinein: dinein,
                 dinerName: name,
                 dinerPhoneNumber: phone,
                 orderedItems,
@@ -29,7 +32,7 @@ export default function OrderConfirm({ table, dinein, name, phone }) {
             }
             console.log(order)
             const placeOrder = async () => {
-                const res = await fetch('https://smart-restaurant-server.herokuapp.com/diner/place-order', {
+                const res = await fetch(`${SERVER_URL}/diner/place-order`, {
                     method: 'POST',
                     headers: {
                         accept: 'application.json',
@@ -44,8 +47,7 @@ export default function OrderConfirm({ table, dinein, name, phone }) {
             }
             placeOrder()
         }
-    }, [quantity, name, phone])
-
+    }, [quantity, name, phone, SERVER_URL])
 
 
     return (

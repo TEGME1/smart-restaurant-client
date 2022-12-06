@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-const GET_URL = 'https://smart-restaurant-server.herokuapp.com/diner/get-foods'
+const SERVER_URL = process.env.REACT_APP_SERVER_URL
+
+const GET_URL = `${SERVER_URL}/diner/get-foods`
 
 const initialState = {
     menu: {},

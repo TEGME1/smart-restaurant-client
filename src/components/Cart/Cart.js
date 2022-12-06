@@ -19,6 +19,9 @@ export default function Cart() {
         ), 0)
         setTotalAmt(total)
     }, [quantity])
+
+    const tax = Math.round(totalAmt * 0.18 * 100) / 100
+
     return (
         <div className='Cart-outer'>
             <Link to="/menu">
@@ -59,7 +62,7 @@ export default function Cart() {
                                     <label className='Card-items-title-content'>Bill Details</label>
                                 </div>
 
-                                <Bill total_price={totalAmt} total_tax={totalAmt * 0.18} total_pay={Math.round(totalAmt * 1.18)} veg_non={"non"} />
+                                <Bill total_price={totalAmt} total_tax={tax} total_pay={totalAmt + tax} veg_non={"non"} />
                             </div>
 
                         </div>
