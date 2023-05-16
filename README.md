@@ -17,4 +17,5 @@ Confirmation Page
 
 <hr>
 <a href="https://github.com/TEGME1/smart-restaurant-server">Code base(Server)</a>
+<br>
 <a href="https://github.com/TEGME1/smart-restaurant-admin">Code base(Admin)</a>
