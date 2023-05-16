@@ -14,3 +14,6 @@ Credentials Page
 
 ![image](https://user-images.githubusercontent.com/76863803/224503173-1d3898c5-bd93-484e-996c-a59768ad6e04.png)<br>
 Confirmation Page
+
+<hr>
+<a href="https://github.com/TEGME1/smart-restaurant-server">Code base(admin)</a>
